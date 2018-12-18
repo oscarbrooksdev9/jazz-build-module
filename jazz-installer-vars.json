@@ -1,0 +1,127 @@
+{
+    "AWS_CREDENTIAL_ID": "jazz_awscreds",
+    "INSTANCE_PREFIX": "jazzoscar",
+    "AWS": {
+        "SECURITY_GROUP_IDS": "sg-04776c0a2bd2adb05",
+        "SUBNET_IDS": "subnet-abf00780",
+        "LAMBDA_EXECUTION_ROLE": "jazzoscar_basic_execution",
+        "CLOUDFRONT_ORIGIN_ID" : "origin-access-identity/cloudfront/ERAYIEA0EM42V",
+        "ACCOUNTID" : "722593364612",
+        "REGION" : "us-east-1",
+        "ROLEID" : "arn:aws:iam::722593364612:role/jazzoscar_basic_execution",
+        "ES_HOSTNAME" : "search-jazzoscar-eox2a35kzeizpkjtktobn2qqey.us-east-1.es.amazonaws.com",
+        "COGNITO": {
+            "USER_POOL_ID" : "us-east-1_msfBryw1w",
+            "CLIENT_ID" : "4mc9lvhqhf8lcs49c03bp5bvdt"
+        },
+        "API": {
+            "PROD": {
+                "*": "jg2mabloa5",
+                "jazz_*": "jg2mabloa5"
+            },
+            "STG": {
+                "*": "ho1a7cc84l",
+                "jazz_*": "ho1a7cc84l"
+            },
+            "DEV": {
+                "*": "8gtip4wcs1"
+            }
+        },
+        "S3": {
+            "API_DOC" : "jazzoscar-jazz-s3-api-doc-20181218192602075000000005",
+            "DEV_BUCKET" : "jazzoscar-apis-deployment-dev-20181218192528591700000002",
+            "STG_BUCKET" : "jazzoscar-apis-deployment-stg-20181218192649057900000008",
+            "PROD_BUCKET" : "jazzoscar-apis-deployment-prod-20181218192646069300000007"
+        },
+        "KINESIS_LOGS_STREAM": {
+          "DEV": "arn:aws:kinesis:us-east-1:722593364612:stream/jazzoscar-logs-streamer-dev",
+          "STG": "arn:aws:kinesis:us-east-1:722593364612:stream/jazzoscar-logs-streamer-stg",
+          "PROD": "arn:aws:kinesis:us-east-1:722593364612:stream/jazzoscar-logs-streamer-prod"
+        },
+        "TAGS" : []
+    },
+    "REPOSITORY": {
+        "BASE_URL": "18.235.7.234",
+        "CREDENTIAL_ID": "jazz_repocreds",
+        "REPO_BASE_SERVICES": "cas",
+        "REPO_BASE_PLATFORM": "slf"
+    },
+    "JAZZ": {
+        "ADMIN" : "oscar.brooks@dev9.com",
+        "PASSWD" : "mcJ0CxKEs@",
+        "S3_BUCKET_NAME_SUFFIX": "_BUCKET",
+        "S3_BUCKET_WEB" : "jazzoscar-web-20181218192528591400000001",
+        "BUCKET_PER_SERVICE": "false",
+        "API_DETAILED_MONITORING" : "true",
+        "S3": {
+            "WEBSITE_DEV_BUCKET" : "jazzoscar-dev-web-20181218192638497700000006",
+            "WEBSITE_STG_BUCKET" : "jazzoscar-stg-web-20181218192528593200000003",
+            "WEBSITE_PROD_BUCKET" : "jazzoscar-prod-web-20181218192554766000000004"
+        },
+        "SWAGGER": {
+            "EDITOR_URL": "http://editor.swagger.io/?url="
+        }
+    },
+    "JENKINS": {
+        "CREDENTIAL_ID": "jobexecutor",
+        "JOB_AUTH_TOKEN": "jazz-101-job",
+        "BUILD_URI": {
+            "API": "build-pack-api",
+            "LAMBDA": "build-pack-lambda",
+            "WEBSITE": "build-pack-website"
+        }
+    },
+    "SCM": {
+        "TYPE": "gitlab",
+        "PRIVATE_TOKEN": "SNzppM5jFkDxzmuUiv8t",
+        "CAS_NAMESPACE_ID": "3"
+    },
+    "UI_CONFIG": {
+        "feature": {
+            "multi_env": true
+        },
+        "service_tabs": {
+            "overview": true,
+            "access_control": false,
+            "metrics": true,
+            "logs": true,
+            "cost": false
+        },
+        "environment_tabs": {
+            "overview": true,
+            "deployments": true,
+            "code_quality": "false",
+            "logs": true,
+            "assets": true
+        }
+    },
+    "CODE_QUALITY": {
+        "SONAR": {
+            "CLEANUP": "true",
+            "KEY_PREFIX": "jazz",
+            "ENABLE_SONAR": "false",
+            "JAZZ_PROFILE": "JazzProfile",
+            "ENABLE_VULNERABILITY_SCAN": "false",
+            "DEPENDENCY_CHECK_NIST_FILES_LOCATION": "/var/log/depcheck_jazz/nistfiles/",
+            "DEPENDENCY_CHECK_NIST_MIRROR_UTILITY": "https://github.com/stevespringett/nist-data-mirror/releases/download/1.1.0/nist-data-mirror.jar",
+            "DEPENDENCY_CHECK_ELAPSED_HOURS_BEFORE_UPDATES": "24",
+            "DEPENDENCY_CHECK_URL": "http://dl.bintray.com/jeremy-long/owasp/dependency-check-2.1.1-release.zip",
+            "HOST_NAME": "REPLACEME",
+            "ADMIN_SONAR_CREDENTIAL_ID": "SONAR_ADMIN_CREDENTIAL",
+            "CHECKSTYLE_LIB": "/opt/checkstyle-7.6-all.jar"
+        }
+    },
+    "SLACK": {
+        "ENABLE_SLACK": "false",
+        "SLACK_USER": "{slack_user}",
+        "SLACK_TOKEN": "{slack_token}",
+        "SLACK_WORKSPACE": "{slack_workspace}",
+        "SLACK_SVC_ID": "{slack_svc_acc_id}"
+    },
+    "SPLUNK": {
+        "IS_ENABLED": "{ENABLE_SPLUNK_FEATURE}",
+        "ENDPOINT": "{SPLUNK_ENDPOINT}",
+        "HEC_TOKEN": "{SPLUNK_TOKEN}",
+        "INDEX": "{SPLUNK_INDEX}"
+ }
+}
